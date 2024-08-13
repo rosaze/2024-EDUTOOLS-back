@@ -9,7 +9,7 @@ async function startServer() {
   const app = express();
   const server = http.createServer(app);
 
-  await loaders(app);
+  await loaders(app); //익스프레스 로더 호출
   socketLoader(server);
 
   const port = process.env.PORT || 3000;
